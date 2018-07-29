@@ -1,6 +1,6 @@
 package org.chiwooplatform.samples.config;
 
-import static springfox.documentation.builders.PathSelectors.*;
+import static springfox.documentation.builders.PathSelectors.ant;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,8 +35,7 @@ public class SwaggerConfiguration {
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Example Open API")
                 .description("Example API showing usege of Swagger for documenting Spring MVC Controller")
-                .contact(new Contact("contact", "http://www.contact.com", "webmaster@contact.com")).version("1.0")
-                .build();
+                .contact(new Contact("contact", "http://www.contact.com", "webmaster@contact.com")).version("1.0").build();
     }
 
     private Predicate<String> forCode() {

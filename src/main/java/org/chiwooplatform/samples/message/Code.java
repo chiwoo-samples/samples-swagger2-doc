@@ -5,15 +5,14 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiModelProperty.AccessMode;
 import lombok.Data;
 
-@ApiModel(value= "Code Schema", description="Code is model of code")
+@ApiModel(value = "Code Schema", description = "Code is model of code")
 @Data
 public class Code {
 
-    @ApiModelProperty(value = "code id", example = "1", required=true)
+    @ApiModelProperty(value = "code id", example = "1", required = true)
     private Integer cdid;
-    
 
-    @ApiModelProperty(value = "parent code id", example = "101", accessMode = AccessMode.READ_ONLY, required=true)
+    @ApiModelProperty(value = "parent code id", example = "101", accessMode = AccessMode.READ_ONLY, required = true)
     private Integer parentId;
 
     @ApiModelProperty(value = "code name", example = "System environment")
@@ -24,9 +23,8 @@ public class Code {
 
     @ApiModelProperty(value = "enable or not", example = "false", required = true)
     private Boolean enabled;
-    
 
     @ApiModelProperty(value = "timestamp for registration", example = "8678463244")
     private Long regdtm;
- 
+
 }
